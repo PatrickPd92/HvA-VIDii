@@ -1,0 +1,122 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+body {
+  margin:0;
+}
+
+button:not([disabled]) {
+  cursor:pointer;
+}
+
+img {
+  max-width:100%;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+  --color-headings:crimson
+  /* ... */
+
+}
+
+
+
+
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+body {
+  height:100vh;
+
+  
+}
+
+main {
+  /* vh = viewport height unit */
+  /* 1vh is 1% van de hoogte van het scherm */
+  /* 100vh is dus zo hoog als het hele scherm */
+  height:100vh;
+
+  display:flex;
+  flex-direction: column;
+  /* overflow: auto; */
+  scroll-snap-type:y mandatory;
+}
+
+/* voor alle secties */
+section {
+  height:100%;
+  flex-shrink:0;
+
+  scroll-snap-align: center;
+}
+/* voor alle h2's */
+section h2 {
+  color:green;
+  margin:0;
+}
+
+
+/*********************/
+/* Sectie 1 Columbia */
+/*********************/
+
+section:nth-of-type(1) {
+  background-color:red;
+}
+
+
+
+
+
+
+/***********************/
+/* Sectie 2 Lighthouse */
+/***********************/
+
+section:nth-of-type(2) {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../images/Bioshock uitkijk toren.png');
+  /* background-color: aqua; */
+  background-size: cover;
+  background-position: right;
+}
+
+
+
+
+/********************/
+/* Sectie 3 Rapture */
+/********************/
+
+section:nth-of-type(3) {
+  background-color:peachpuff;
+}
+
+section:nth-of-type(3) h2 {
+  color:brown;
+  margin:0;
+}
+
+
+
