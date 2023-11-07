@@ -39,8 +39,12 @@ var popup1 = document.getElementById("popup1")
 button1.onclick = popup1zichtbaar;
 
 function popup1zichtbaar() {
-  popup1.classList.toggle("zichtbaar1");
+  popup1.classList.toggle("zichtbaar1");  
 }
+
+
+
+
 
 /**********************/
 /*******  Audio  *******/
@@ -63,7 +67,7 @@ function popup1zichtbaar() {
 
 
 /**********************/
-/*****pop up knop 1****/
+/*****pop up knop 2****/
 /**********************/
 
 var button2 = document.getElementById("BuildingButton2")
@@ -78,6 +82,24 @@ function popup2zichtbaar() {
 
 
 
+
+
+
+
+
+
+/**********************/
+/*****pop up knop 3****/
+/**********************/
+
+var button3 = document.getElementById("BuildingButton3")
+var popup3 = document.getElementById("popup3")
+
+button3.onclick = popup3zichtbaar;
+
+function popup3zichtbaar() {
+  popup3.classList.toggle("zichtbaar");
+}
 
 
 
@@ -96,3 +118,10 @@ function createBubble() {
 
 // Creëer regelmatig nieuwe bubbels
 setInterval(createBubble, 2000); // Hier elke 2 seconden een nieuwe bubbel
+
+
+
+
+
+
+// FISJE!!!!!!!
