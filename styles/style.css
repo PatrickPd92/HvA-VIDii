@@ -2,13 +2,20 @@
 /* CSS REMEDY */
 /**************/
 
-/* naar een idee van Jen Simmons */
+/* naar een idee van Jen Simmons ------- wie is jen simmons?*/
 *, *::after, *::before {
   box-sizing:border-box;  
 }
 
 body {
   margin:0;
+  background: url(../images/Bioshock\ rapture\ svg.svg), linear-gradient(#041213, #2CB5BC, #337D94) ;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 button:not([disabled]) {
@@ -20,7 +27,20 @@ img {
 }
 
 
+@font-face {
+  font-family: 'Andes';
+  src: url('path/naar/andes.ttf') format('truetype');
+}
 
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 
 /*********************/
@@ -28,9 +48,9 @@ img {
 /*********************/
 
 :root {
-  --color-headings:crimson
+  --color-headings:white;
   /* ... */
-
+  --font-headings:'Andes';
 }
 
 
@@ -41,82 +61,200 @@ img {
 /* ALGEMENE STYLING */
 /********************/
 
-body {
-  height:100vh;
-
-  
-}
-
-main {
-  /* vh = viewport height unit */
-  /* 1vh is 1% van de hoogte van het scherm */
-  /* 100vh is dus zo hoog als het hele scherm */
-  height:100vh;
-
-  display:flex;
-  flex-direction: column;
-  /* overflow: auto; */
-  scroll-snap-type:y mandatory;
-}
-
-/* voor alle secties */
-section {
-  height:100%;
-  flex-shrink:0;
-
-  scroll-snap-align: center;
-}
-/* voor alle h2's */
-section h2 {
-  color:green;
-  margin:0;
+header > h1 {
+  color: var(--color-headings);
+  font-family: 'Andes', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.8em;
+  position: absolute;
+  top: 0.3em;
+  left: 1em;
 }
 
 
-/*********************/
-/* Sectie 1 Columbia */
-/*********************/
+/* ... */
 
-section:nth-of-type(1) {
-  background-color:red;
-}
-
-
-
-
-
-
-/***********************/
-/* Sectie 2 Lighthouse */
-/***********************/
-
-section:nth-of-type(2) {
+.achtergrond {
   position: relative;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url('../images/Bioshock uitkijk toren.png');
-  /* background-color: aqua; */
-  background-size: cover;
-  background-position: right;
+}
+
+
+.button-with-svg {
+  position: absolute;
+  top: 10px; /* Afstand vanaf de bovenkant van de pagina */
+  right: 10px; /* Afstand vanaf de rechterkant van de pagina */
+  width: 50px; /* Pas de breedte aan zoals gewenst */
+  height: 50px; /* Pas de hoogte aan zoals gewenst */
+  border-radius: 50%; /* Maakt de knop rond (cirkelvormig) */
+  background-color: #6bb8bd;
+}
+
+
+
+
+
+
+
+/********************/
+/********Gebouwen****/
+/********************/
+
+
+
+button#BuildingButton1 {
+  width: auto;
+  height: 50vh;
+  align-self: flex-end; /* Verticale centrering */
+}
+
+button#BuildingButton2 {
+  width: auto;
+  height: 70vh;
+  align-self: flex-end; /* Verticale centrering */
+}
+
+button#BuildingButton3 {
+  width: auto;
+  height: 50vh;
+  align-self: flex-end; /* Verticale centrering */
+}
+
+/**********hover effecten gebouwen**********/
+
+button#BuildingButton1:hover {
+  filter: drop-shadow(0 0 0.75rem #155f75);
+  }
+
+button#BuildingButton2:hover {
+filter: drop-shadow(0 0 0.75rem #155f75);
+}
+
+button#BuildingButton3:hover {
+  filter: drop-shadow(0 0 0.75rem #155f75);
+  }
+
+
+/* niet aanraken */
+button#BuildingButton1 img, button#BuildingButton2 img, button#BuildingButton3 img {
+  height: 100%;
+  padding: 0 4em 0 3em;
+}
+
+
+#Building:hover {
+  opacity: 1.5;
+  transition: opacity 0.5s;
+  size-adjust: 1.1;
+  box-shadow: black;
+}
+
+.toggle-audio-button {
+  display: none;
 }
 
 
 
 
 /********************/
-/* Sectie 3 Rapture */
+/****** popup1 ******/
 /********************/
 
-section:nth-of-type(3) {
-  background-color:peachpuff;
-}
+section {
+  padding-top: 25vh;
+  display:none;
 
-section:nth-of-type(3) h2 {
-  color:brown;
-  margin:0;
 }
 
 
+article {
+  width: 40vw;
+  height: 40vh;
+  display: grid;
+  background-color: #358199;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 10% 90%;
+  grid-gap: 1em;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid #083F50;
+}
 
+article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-row: 2 ; /* Neem twee rijen in beslag */
+  grid-column: 1;
+}
+
+article > h2, p {
+  position: relative;
+}
+
+h2 {
+/* letter kleur letter font  */
+color: var(--color-headings);
+font-family:var(--font-headings) ;
+letter-spacing: 0.2em;
+grid-column-start:2 ;
+grid-column-end:3 ;
+grid-row-start:1 ;
+grid-row-end:2 ;
+}
+
+p {
+/* letter kleur letter font  */
+grid-column-start:2 ;
+grid-column-end:3 ;
+grid-row-start:2 ;
+grid-row-end:3 ;
+}
+
+
+.zichtbaar {
+  position: fixed;
+  display: block;
+}
+
+
+
+
+
+
+
+
+/* BUBBELS! */
+
+
+body {
+    overflow: hidden;
+}
+
+.bubble {
+    width: 20px;
+    height: 20px;
+    background-color: #337E95;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0; 
+    animation: float 4s linear infinite, pop 1s ease-out forwards;
+    animation-delay: 0s, 2s; /* Voeg een vertraging toe zodat de bubbels op verschillende momenten verschijnen */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100%); /* Startpositie onderaan het scherm */
+    }
+    100% {
+        transform: translateY(-600%); /* Eindpositie bovenaan het scherm */
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1) translateY(-250%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translateY(-250%); /* Verplaats de knappende animatie met de bubbels */
+        opacity: 0;
+    }
+}

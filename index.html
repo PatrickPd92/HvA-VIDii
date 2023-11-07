@@ -9,34 +9,101 @@
 	<title>VIDii 2023/24 - Tijdlijn</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/png+xml" href="images/favicon.png">
+	<link rel="icon" type="image/x-icon" href="/Bioshock icon.icon">
 </head>
 
+
+<header>	
+	
+	<h1>  Rapture </h1>
+	<!-- <img class="achtergrond" src="./images/Bioshock rapture svg.svg" alt=""> -->
+	<!-- index en later kwam ik er a hter dat hij ook op de body kon -->
+<!-- Achtergrond met de rapture svg van de stad -->
+
+	<button class="button-with-svg">
+		<img src="images/Audio aan.svg">
+	</button>
+
+<!-- audio bestand voor het afspelen van geluid met de knop -->
+
+	<audio id="mijn audio" src="geluid/Bioshock Music  Ambience.mp3"></audio>
+	<button class="toggle-audio-button">
+		<img src="images/Audio uit.svg" alt="Audio uit">
+	</button>
+</header>
+
+
 <body>
-	<main>
-		<section>
-			<h2>lucht</h2>
-		</section>
+
+<!-- het gebouw waar op geklikt moet worden. -->
 	
-		<section>
-			<h2>Light house</h2>
+		<button id="BuildingButton1">
+		  <img src="./images/Bioshock building.svg" alt="building">
+		</button>
 
-			<!-- Watter effect poging
-			<div class="background">
+		<button id="BuildingButton2">
+		  <img src="./images/Bioshock_building_2.svg" alt="building">
+		</button> 
 
-			
-			</div> -->
+		<button id="BuildingButton3">
+			<img src="./images/Bioshock_building_3.svg" alt="building">
+		  </button> 
 
-			
+<section id="popup1" class="">
+	<article>
+		<audio id="popupAudio" src="./geluid/BioShock  Circus of Values Sound Effect.mp3"></audio>
+		<h2>
+			Circus of Values
+		</h2>
+		<p>
+			Met behulp van deze machines kan de speler items en munitie kopen
+			Deze bijzondere machine begroet de speler met een iconisch geluidseffect dat klinkt als een vrolijke stem die de woorden "Circus of Values" uitspreekt.
+			Dit geluid is direct herkenbaar voor de speler. Bij deze handige voorziening kun je jouw in-game valuta, zoals ADAM, uitgeven om benodigdheden te verkrijgen die cruciaal zijn om te overleven.
+			Het hacken van een automaat verlaagt de prijzen en levert soms artikelen op die anders niet verkrijgbaar zijn
+		</p>
+		<img src="./images/vending machine .png">
+	</article>
+</section>
 
-		</section>
 	
-		<section>
-			<h2>zee</h2>
-		</section>
-	</main>
+<section id="popup2" class="">
+	<article>
+		<h2>
+			Big daddy
+		</h2>
+		<p>
+			Big Daddies zijn genetisch gemodificeerde mensen die zijn versterkt met zware bepantsering en biologische aanpassingen. Ze zijn ontworpen om de Little Sisters te beschermen, die genetisch zijn gemanipuleerd om ADAM te verzamelen, een kostbare grondstof in de wereld van BioShock. Little Sisters verzamelen ADAM van lijken, en dit maakt ze waardevolle doelwitten voor andere bewoners van de onderwaterstad Rapture, waarin de eerste twee BioShock-spellen zich afspelen.
 
+		</p>
+		<img src="">
+	</article>
+</section>
+
+
+</body>
+
+<section id="popup3" class="">
+	<article>
+		<h2>
+			Plasmids
+		</h2>
+		<p>
+			Big Daddies zijn genetisch gemodificeerde mensen die zijn versterkt met zware bepantsering en biologische aanpassingen. Ze zijn ontworpen om de Little Sisters te beschermen, die genetisch zijn gemanipuleerd om ADAM te verzamelen, een kostbare grondstof in de wereld van BioShock. Little Sisters verzamelen ADAM van lijken, en dit maakt ze waardevolle doelwitten voor andere bewoners van de onderwaterstad Rapture, waarin de eerste twee BioShock-spellen zich afspelen.
+
+		</p>
+		<img src="">
+	</article>
+</section>
 	<script src="scripts/script.js"></script>
 </body>
 	
+
+
+
+<!-- hier ga ik bubbels maken -->
+
+<div class="bubble"></div>
+    <!-- Voeg meer bellen toe zoals dat nodig is -->
+    <script src="script.js"></script>
+
 </html>
