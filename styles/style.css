@@ -7,6 +7,89 @@
   box-sizing:border-box;  
 }
 
+/* ZERO _ STATE!!! */
+
+#zero-state {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  z-index:99;
+}
+
+#zero-state h2 {
+  font-size: 24px;
+}
+
+#zero-state p {
+  font-size: 16px;
+}
+
+#zero-state button {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  background-color: #6bb8bd;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#zero-state button:hover {
+  background-color: #155f75;
+}
+
+.zero-state-hidden {
+  display: none;
+}
+
+
+
+
+
+
+
+/*******************************/
+/**Would you kindly(Easteregg)**/
+/*******************************/
+
+
+
+.easteregg {
+  position: absolute;
+  width: 15vw;
+  left: 43vw;
+  top: 2vh;
+}
+
+.easteregg img{
+  width: 100%;
+  height: 100%;
+}
+
+#popup {
+  width: 15em; 
+  height: 15em;
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+
+/************************/
+/********  Body  ********/
+/************************/
+
 body {
   margin:0;
   background: url(../images/Bioshock\ rapture\ svg.svg), linear-gradient(#041213, #2CB5BC, #337D94) ;
@@ -49,7 +132,6 @@ button, input[type="submit"], input[type="reset"] {
 
 :root {
   --color-headings:white;
-  /* ... */
   --font-headings:'Andes';
   --font-basistekst:'gothicb';
 }
@@ -71,9 +153,6 @@ header > h1 {
   left: 1em;
 }
 
-
-/* ... */
-
 .achtergrond {
   position: relative;
 }
@@ -88,22 +167,22 @@ header > h1 {
   border-radius: 50%; /* Maakt de knop rond (cirkelvormig) */
   background-color: #6bb8bd;
 }
+ 
+
+  
 
 
 
 
+/********************************************/
+/****Gebouwen Positie & de grote hier van****/
+/********************************************/
 
 
 
-/********************/
-/********Gebouwen****/
-/********************/
-
-
-
-button#BuildingButton1 {
+button#BuildingButton1,button#BuildingButton3  {
   width: auto;
-  height: 50vh;
+  height: 60vh;
   align-self: flex-end; /* Verticale centrering */
 }
 
@@ -113,33 +192,29 @@ button#BuildingButton2 {
   align-self: flex-end; /* Verticale centrering */
 }
 
-button#BuildingButton3 {
-  width: auto;
-  height: 50vh;
-  align-self: flex-end; /* Verticale centrering */
-}
 
-/**********hover effecten gebouwen**********/
+/*******************************************/
+/********hover effecten gebouwen************/
+/*******************************************/
 
 button#BuildingButton1:hover {
-  filter: drop-shadow(0 0 0.75rem #155f75);
-  }
+filter: drop-shadow(0 0 0.75rem #155f75);
+}
 
 button#BuildingButton2:hover {
 filter: drop-shadow(0 0 0.75rem #155f75);
 }
 
 button#BuildingButton3:hover {
-  filter: drop-shadow(0 0 0.75rem #155f75);
-  }
+filter: drop-shadow(0 0 0.75rem #155f75);
+}
 
 
-/* niet aanraken */
+/*Sam hielp mij en zij  NIET AANRAKEN! deze lijn*/
 button#BuildingButton1 img, button#BuildingButton2 img, button#BuildingButton3 img {
   height: 100%;
   padding: 0 4em 0 3em;
 }
-
 
 #Building:hover {
   opacity: 1.5;
@@ -152,12 +227,6 @@ button#BuildingButton1 img, button#BuildingButton2 img, button#BuildingButton3 i
   display: none;
 }
 
-
-
-/********************/
-/****** popup1 ******/
-/********************/
-
 section {
   display:none;
 }
@@ -168,25 +237,29 @@ section {
 
 #popup1 {
   position:absolute;
-  left:5%;
+  left:2.5%;
   top:30%;
 }
 
 #popup2 {
   position:absolute;
-  left:20%;
+  left:34%;
   top:10%;
 }
 
 #popup3 {
   position:absolute;
-  right:10%;
+  right:5%;
   top:30%;
 }
 
+button:focus {
+  filter: drop-shadow(0 0 0.75rem #155f75);
+}
+
 article {
-  width: 60vw;
-  height: 40vh;
+  width: 30vw; /* De breedte van de popup. */
+  height: 40vh; /* De hoogte van de popup. */
   display: grid;
   background-color: #358199;
   grid-template-columns: 40% 60%;
@@ -194,14 +267,36 @@ article {
   column-gap: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   border: 2px solid #083F50;
+  overflow: hidden;
+  overflow-y: scroll;  
 }
+
+
+/**************************************/
+/******  de Scrol bar aangepast  ******/
+/**************************************/
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+/**************************************/
+/******  Articel lay-out  *************/
+/**************************************/
 
 article img, video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   grid-row-start: 1 ;
-  grid-row-end: 3; /* Neem twee rijen in beslag */
+  grid-row-end: 3;
   grid-column-start: 1;
 }
 
@@ -228,7 +323,7 @@ grid-column-start:2 ;
 grid-column-end:3 ;
 grid-row-start:2 ;
 grid-row-end:3 ;
-padding-right: 1em;
+padding-right: 2em;
 }
 
 .zichtbaar {
@@ -236,12 +331,9 @@ padding-right: 1em;
 }
 
 
-
-
 /********************/
 /******Bubbels!******/
 /********************/
-
 
 
 body {

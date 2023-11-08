@@ -2,7 +2,40 @@
 console.log("Howdy!");
 
 /**********************/
-/* Geluid Van Rapture */
+/* Zero-start */
+/**********************/
+
+var beginHier = document.querySelector("#zero-state");
+
+document.getElementById("start").addEventListener("click", function() {
+  console.log("test")
+  beginHier.classList.add("zero-state-hidden")
+});
+
+
+
+/***********************/
+/* *Logo van Bioshock* */
+/***********************/
+
+
+var logo = document.querySelector(".easteregg");
+var popup = document.getElementById("popup");
+
+logo.addEventListener("click", function(event) {
+
+  popup.style.display = "block";
+  event.stopPropagation();
+});
+
+document.addEventListener("click", function(event) {
+  if (event.target !== popup) {
+    popup.style.display = "none";
+  }
+});
+
+/**********************/
+/* Geluid Van Rapture */ 
 /**********************/
 
 // Haal het <audio>-element op
@@ -45,9 +78,8 @@ function popup1zichtbaar() {
 
 
 
-
 /**********************/
-/*******  Audio  *******/
+/*******  Audio1  *******/
 /**********************/
 
 var button1 = document.getElementById("BuildingButton1");
@@ -65,7 +97,6 @@ function popup1zichtbaar() {
 
 
 
-
 /**********************/
 /*****pop up knop 2****/
 /**********************/
@@ -79,9 +110,21 @@ function popup2zichtbaar() {
   popup2.classList.toggle("zichtbaar");
 }
 
+/************************/
+/*******  Audio2  *******/
+/************************/
 
+var button2 = document.getElementById("BuildingButton2");
+var popup2 = document.getElementById("popup2");
+var popup2Audio = document.getElementById("popup2Audio"); 
 
+button2.onclick = popup2zichtbaar;
+popup2Audio.volume = 0.3;
 
+function popup2zichtbaar() {
+  popup2.classList.toggle("zichtbaar");
+  popup2Audio.play();
+}
 
 
 
@@ -102,8 +145,27 @@ function popup3zichtbaar() {
 }
 
 
+/*************************/
+/*******  Audio3  *******/
+/************************/
 
-/*****BUBBELS******/ 
+var button3 = document.getElementById("BuildingButton3");
+var popup3 = document.getElementById("popup3");
+var popup3Audio = document.getElementById("popup3Audio"); 
+
+button3.onclick = popup3zichtbaar;
+popup3Audio.volume = 0.3;
+
+function popup3zichtbaar() {
+  popup3.classList.toggle("zichtbaar");
+  popup3Audio.play();
+}
+
+
+
+/**********************/
+/****** Bubbels! ******/
+/**********************/
 
 function createBubble() {
   const bubble = document.createElement('div');
@@ -118,10 +180,3 @@ function createBubble() {
 
 // Creëer regelmatig nieuwe bubbels
 setInterval(createBubble, 2000); // Hier elke 2 seconden een nieuwe bubbel
-
-
-
-
-
-
-// FISJE!!!!!!!

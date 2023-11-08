@@ -15,17 +15,45 @@
 
 <header>	
 	
+
+
+
+<!--**************-->
+<!--Zero - State  -->
+<!--**************-->
+
+<div id="zero-state">
+	<h2>Welkom op mijn website!</h2>
+	<p>Ontdek de wereld van Rapture!</p>
+	<button id="start"> Verken Rapture </button>
+  </div>
+
 	<h1>  Rapture </h1>
-	<!-- <img class="achtergrond" src="./images/Bioshock rapture svg.svg" alt=""> -->
-	<!-- index en later kwam ik er a hter dat hij ook op de body kon -->
-<!-- Achtergrond met de rapture svg van de stad -->
+
+
+	  
+<!--****************-->
+<!--***Easteregg****-->
+<!--****************-->
+
+   <button class="easteregg" id="logo">
+	<img src="./images/Bioshock Logo.svg">
+  </button>
+  
+  <div id="popup" style="display: none;">
+	<img src="./images/brief.easteregg.png" alt="Brief">
+	<audio id="easteregg-audio">
+		<source src="./geluid/easteregg.mp3" type="audio/mpeg"></audio>
+  </div>
+
+<!--**************-->
+<!--*audio Toggle*-->
+<!--**************-->
 
 	<button class="button-with-svg">
 		<img src="images/Audio aan.svg">
 	</button>
-
-<!-- audio bestand voor het afspelen van geluid met de knop -->
-
+	
 	<audio id="mijn audio" src="geluid/Bioshock Music  Ambience.mp3"></audio>
 	<button class="toggle-audio-button">
 		<img src="images/Audio uit.svg" alt="Audio uit">
@@ -35,7 +63,9 @@
 
 <body>
 
-<!-- het gebouw waar op geklikt moet worden. -->
+<!--****************-->
+<!--*Gebouwen image*-->
+<!--****************-->
 	
 		<button id="BuildingButton1">
 		  <img src="./images/Bioshock building.svg" alt="building">
@@ -49,33 +79,36 @@
 			<img src="./images/Bioshock_building_3.svg" alt="building">
 		  </button> 
 
+		  <!--******************-->
+          <!--*Gebouwen Secties*-->
+          <!--******************-->
+
 <section id="popup1" class="">
 	<article>
-		<audio id="popupAudio" src="./geluid/BioShock  Circus of Values Sound Effect.mp3"></audio>
+		<audio id="popupAudio" src="./geluid/Hacking success-sound.mp3"></audio>
 		<h2>
-			Circus of Values
+			1960 Rapture
 		</h2>
 		<p>
-			Met behulp van deze machines kan de speler items en munitie kopen
-			Deze bijzondere machine begroet de speler met een iconisch geluidseffect dat klinkt als een vrolijke stem die de woorden "Circus of Values" uitspreekt.
-			Dit geluid is direct herkenbaar voor de speler. Bij deze handige voorziening kun je jouw in-game valuta, zoals ADAM, uitgeven om benodigdheden te verkrijgen die cruciaal zijn om te overleven.
-			Het hacken van een automaat verlaagt de prijzen en levert soms artikelen op die anders niet verkrijgbaar zijn
+			In de vroege jaren 1960 richtte de visionaire zakenman Andrew Ryan de onderwaterstad Rapture op, een utopische samenleving ver verwijderd van de bovenwereld. Het was in deze periode dat de eerste Big Daddies, bekend als Bouncers en Rosies, werden gecreëerd. Ze waren ontworpen om Little Sisters te beschermen terwijl ze ADAM verzamelden. 
+			ADAM wordt gebruikt om de eigenschappen van mensen te verbeteren door middel van genetische aanpassingen, die plasmiden worden genoemd. adam is ook verslavend voor de gebruiker
+			Rapture bloeide als een technologisch wonder, maar het overmatige gebruik van ADAM leidde al snel tot de opkomst van de Splicers (verslaafde bewoners) en de neergang van de stad
 		</p>
-		<img src="./images/vending machine .png">
+		<img src="./images/Bigdaddy.png">
 	</article>
 </section>
 
-	
+
 <section id="popup2" class="">
 	<article>
+		<audio id="popup2Audio" src="./geluid/Bioshock 2_ Big Daddy Calm Sound.mp3"></audio>
 		<h2>
-			Big daddy
+			2010 De Evolutie
 		</h2>
 		<p>
-			Big Daddies zijn genetisch gemodificeerde mensen die zijn versterkt met zware bepantsering en biologische aanpassingen. Ze zijn ontworpen om de Little Sisters te beschermen, die genetisch zijn gemanipuleerd om ADAM te verzamelen, een kostbare grondstof in de wereld van BioShock. Little Sisters verzamelen ADAM van lijken, en dit maakt ze waardevolle doelwitten voor andere bewoners van de onderwaterstad Rapture, waarin de eerste twee BioShock-spellen zich afspelen.
-
+			Terwijl Rapture in verval raakte, evolueerden de Big Daddies. In 2010 werd de Rumbler Big Daddy geïntroduceerd, uitgerust met raketwerpers om grotere bedreigingen het hoofd te bieden. Tegelijkertijd ontstond de Alpha Series, een experimenteel type Big Daddy met minder controle. In BioShock 2, dat zich afspeelt in 2010, speel je als Subject Delta, een unieke Big Daddy die Little Sisters kon adopteren. Deze veranderingen in het Big Daddy-ontwerp weerspiegelen de voortdurende turbulentie in Rapture..
 		</p>
-		<img src="./images/Bigdaddy.png">
+		<img src="./images/Bioshock Delta.png">
 	</article>
 </section>
 
@@ -84,18 +117,14 @@
 
 <section id="popup3" class="">
 	<article>
+		<audio id="popup3Audio" src="./geluid/Notification.mp3"></audio>
 		<h2>
-			Plasmids
+			2014 De Val
 		</h2>
 		<p>
-			In het spel BioShock zijn Plasmids genetisch gemodificeerde substanties die spelers kunnen gebruiken om verschillende krachten en vaardigheden te verkrijgen.
-
-Elke Plasmid had zijn eigen unieke vermogen. Met Electro Bolt konden vijanden worden verlamd, terwijl Incinerate vuurbollen kon creëren om obstakels te vernietigen en vijanden in vuur en vlam te zetten. Met Telekinese kon de speler objecten oppakken en ze als projectielen gebruiken, terwijl Winter Blast vijanden vertraagde en hen kwetsbaarder maakte. Er was zelfs een Plasmid genaamd Security Bullseye om vijanden te markeren, waardoor beveiligingscamera’s en turrets automatisch op hen richtten.
-
+			Tegen 2014 was Rapture veranderd in een dystopische en instortende stad. De burgeroorlog, de chaos veroorzaakt door ADAM en de rivaliteit tussen Andrew Ryan en Atlas hadden de stad tot een ruïne gemaakt. In dat jaar kwam de ondergang van Rapture tot een dramatisch hoogtepunt. De stad zonk uiteindelijk naar de diepten van de oceaan, waardoor een definitief einde kwam aan het ooit zo veelbelovende Rapture. De Big Daddies en hun iconische rol in de stad blijven een blijvende herinnering aan deze bijzondere plaats in de geschiedenis van gaming.
 		</p>
-		<video width="320" height="240" controls>
-			<source src="./video/Bioshock 2 - Incinerate! Plasmid Advertisement.mp4"type="video/mp4"></video>
-		</video>
+		<img src="./images/Bioshock downfall.png">
 	</article>
 </section>
 	<script src="scripts/script.js"></script>
@@ -103,8 +132,9 @@ Elke Plasmid had zijn eigen unieke vermogen. Met Electro Bolt konden vijanden wo
 	
 
 
-
-<!-- hier ga ik bubbels maken -->
+<!--****************-->
+<!--*****Bubbels****-->
+<!--****************-->
 
 <div class="bubble"></div>
     <!-- Voeg meer bellen toe zoals dat nodig is -->
