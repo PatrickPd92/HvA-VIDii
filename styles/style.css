@@ -2,12 +2,17 @@
 /* CSS REMEDY */
 /**************/
 
+
 /* naar een idee van Jen Simmons ------- wie is jen simmons?*/
 *, *::after, *::before {
   box-sizing:border-box;  
 }
 
-/* ZERO _ STATE!!! */
+/*******************************/
+/******** **ZEROSTATE!!! *******/
+/*******************************/
+/* chat gpt */
+/* en een beetje sam */
 
 #zero-state {
   position: absolute;
@@ -82,7 +87,7 @@
   top: 10%;
   left: 65%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 1.25em
 }
 
 
@@ -90,6 +95,7 @@
 /********  Body  ********/
 /************************/
 
+/* https://css-tricks.com/css3-gradients/ */
 body {
   margin:0;
   background: url(../images/Bioshock\ rapture\ svg.svg), linear-gradient(#041213, #2CB5BC, #337D94) ;
@@ -129,6 +135,7 @@ button, input[type="submit"], input[type="reset"] {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+/* Hulp van Sam */
 
 :root {
   --color-headings:white;
@@ -160,10 +167,10 @@ header > h1 {
 
 .button-with-svg {
   position: absolute;
-  top: 10px; /* Afstand vanaf de bovenkant van de pagina */
-  right: 10px; /* Afstand vanaf de rechterkant van de pagina */
-  width: 50px; /* Pas de breedte aan zoals gewenst */
-  height: 50px; /* Pas de hoogte aan zoals gewenst */
+  top: 0.625em; /* Afstand vanaf de bovenkant van de pagina */
+  right: 0.625em; /* Afstand vanaf de rechterkant van de pagina */
+  width: 3.125em; /* Pas de breedte aan zoals gewenst */
+  height: 3.125em; /* Pas de hoogte aan zoals gewenst */
   border-radius: 50%; /* Maakt de knop rond (cirkelvormig) */
   background-color: #6bb8bd;
 }
@@ -196,6 +203,7 @@ button#BuildingButton2 {
 /*******************************************/
 /********hover effecten gebouwen************/
 /*******************************************/
+/* developer.mozilla.org/drop-shadow */
 
 button#BuildingButton1:hover {
 filter: drop-shadow(0 0 0.75rem #155f75);
@@ -265,8 +273,8 @@ article {
   grid-template-columns: 40% 60%;
   grid-template-rows: 10% 90%;
   column-gap: 1em;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border: 2px solid #083F50;
+  box-shadow: 0px 0px 0.625em rgba(0, 0, 0, 0.5);
+  border: 0.125em solid #083F50;
   overflow: hidden;
   overflow-y: scroll;  
 }
@@ -275,21 +283,31 @@ article {
 /**************************************/
 /******  de Scrol bar aangepast  ******/
 /**************************************/
+/* https://css-tricks.com/custom-scrollbars-in-webkit/*/
+/* deze code werkte verassend goed in een keer. */
+
+
 ::-webkit-scrollbar {
-  width: 12px;
+    width: 0.75em;
 }
+ 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-  border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0.375em rgba(0,0,0,0.3); 
+    border-radius: 0.625em;
 }
+ 
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    border-radius: 0.625em;
+    -webkit-box-shadow: inset 0 0 0.375em rgba(0,0,0,0.5); 
 }
 
 /**************************************/
 /******  Articel lay-out  *************/
 /**************************************/
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap */
+/* Samen met Sam (grids uitgelegd + columns */
+/* https://cssgrid-generator.netlify.app/ <- dankje Romy*/ 
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
 
 article img, video {
   width: 100%;
@@ -324,6 +342,7 @@ grid-column-end:3 ;
 grid-row-start:2 ;
 grid-row-end:3 ;
 padding-right: 2em;
+overflow-y: scroll;
 }
 
 .zichtbaar {
@@ -334,11 +353,13 @@ padding-right: 2em;
 /********************/
 /******Bubbels!******/
 /********************/
-
+/* dankje wel chat gpt voor de basis animatie deze heb ik zelf aangepast.*/
+/* https://codepen.io/patrickpd92/pen/JjxbxeZ?editors=0110 */
 
 body {
     overflow: hidden;
 }
+
 
 .bubble {
     width: 1em;
@@ -351,6 +372,7 @@ body {
     animation-delay: 0s, 2s; /* Voeg een vertraging toe zodat de bubbels op verschillende momenten verschijnen */
 }
 
+/* chat gpt */
 @keyframes float {
     0% {
         transform: translateY(100%); /* Startpositie onderaan het scherm */

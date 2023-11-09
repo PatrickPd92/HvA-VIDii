@@ -166,6 +166,8 @@ function popup3zichtbaar() {
 /**********************/
 /****** Bubbels! ******/
 /**********************/
+/* dankje wel chat gpt voor de basis animatie deze heb ik zelf aangepast.*/
+/* https://codepen.io/patrickpd92/pen/JjxbxeZ?editors=0110 */ 
 
 function createBubble() {
   const bubble = document.createElement('div');
