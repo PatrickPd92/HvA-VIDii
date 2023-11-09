@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nl">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="jouw naam">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>VIDii 2023/24 - Tijdlijn</title>
+	
+	<link href="styles/style.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="./images/Bioshock icon.png">
+</head>
+
+
+<header>	
+	
+<!--**************-->
+<!--Zero - State  -->
+<!--**************-->
+
+<div id="zero-state">
+	<h2>Welkom In Rapture</h2>
+	<p>Ontdek de wereld van Rapture!</p>
+	<button id="start"> Verkenen! </button>
+  </div>
+
+	<h1>  Rapture </h1>
+
+
+	  
+<!--********************-->
+<!--*******Easteregg****-->
+<!--********************-->
+
+   <button class="easteregg" id="logo">
+	<img src="./images/Bioshock Logo.svg">
+  </button>
+  
+  <div id="popup" style="display: none;">
+	<img src="./images/brief.easteregg.png" alt="Brief">
+	<audio id="easteregg-audio">
+		<source src="./geluid/easteregg.mp3" type="audio/mpeg"></audio>
+  </div>
+
+<!--**************************-->
+<!--*********audio Toggle*****-->
+<!--**************************-->
+
+	<button class="button-with-svg">
+		<img src="images/Audio aan.svg">
+	</button>
+	
+	<audio id="mijn audio" src="geluid/Bioshock Music  Ambience.mp3"></audio>
+	<button class="toggle-audio-button">
+		<img src="images/Audio uit.svg" alt="Audio uit">
+	</button>
+</header>
+
+
+<body>
+
+<!--****************-->
+<!--*Gebouwen image*-->
+<!--****************-->
+	
+		<button id="BuildingButton1">
+		  <img src="./images/Bioshock building.svg" alt="building">
+		</button>
+
+		<button id="BuildingButton2">
+		  <img src="./images/Bioshock_building_2.svg" alt="building">
+		</button> 
+
+		<button id="BuildingButton3">
+			<img src="./images/Bioshock_building_3.svg" alt="building">
+		  </button> 
+
+		  <!--******************-->
+          <!--*Gebouwen Secties*-->
+          <!--******************-->
+		  <!-- Sanne en Sam hielpen met de secties & artikels -->
+		  <!-- https://www.textbroker.nl/html-voor-gevorderden-zo-voorzie-je-je-teksten-van-een-goede-opmaak -->
+		  <!-- veel was hier wel van zelf spreken, zoals h1,h2,h3, p, enn dingen een clas geven deze clas op halen in css en js was wat lastiger -->
+
+<section id="popup1" class="">
+	<article>
+		<audio id="popupAudio" src="./geluid/Hacking success-sound.mp3"></audio>
+		<h2>
+			1950 ontstaan
+		</h2>
+		<p>
+			In de vroege jaren 1950 richtte de visionaire zakenman Andrew Ryan de onderwaterstad Rapture op, een utopische samenleving ver verwijderd van de bovenwereld.<br><br>
+			
+			De Alpha Series Big Daddies zijn prototypes in het Little Sister's Protector Program. Deze Alpha Series vertoonden emotionele instabiliteit en waren minder succesvol dan latere Big Daddy-modellen ze vertoonde verwardheid en woede Dit maakte hen minder voorspelbaar en moeilijker te beheersen dan latere Big Daddy-modellen.
+		</p>
+		<img src="./images/Bioshock Delta.png">
+	</article>
+</section>
+
+
+<section id="popup2" class="">
+	<article>
+		<audio id="popup2Audio" src="./geluid/Bioshock 2_ Big Daddy Calm Sound.mp3"></audio>
+		<h2>
+			1952 Rapture
+		</h2>
+		<p>
+			 Het was in deze periode dat de eerste succesvolle Big Daddies, bekend als Bouncers, werden gecreëerd. Ze waren ontworpen om Little Sisters te beschermen terwijl ze ADAM verzamelden en Gebruikt voor onderhoudsdoeleinden. <br><br>
+			 
+			ADAM wordt gebruikt om de eigenschappen van mensen te verbeteren door middel van genetische aanpassingen, die plasmiden worden genoemd. adam is ook verslavend voor de gebruiker <br><br>
+			Rapture bloeide als een technologisch wonder, maar het overmatige gebruik van ADAM leidde al snel tot de opkomst van de Splicers (verslaafde bewoners)
+		</p>
+		<img src="./images/Bigdaddy.png">
+	</article>
+</section>
+
+
+
+
+<section id="popup3" class="">
+	<article>
+		<audio id="popup3Audio" src="./geluid/Notification.mp3"></audio>
+		<h2>
+			1960 De Evolutie
+		</h2>
+		<p>
+			Terwijl Rapture in verval raakte, evolueerden de Big Daddies. In 1960 werd de Rumbler & Rosie Big Daddy geïntroduceerd. Deze Big Daddies zijn beter bewapend dan voorheen.<br><br>
+
+			Rosie was oorspronkelijk bedoeld voor het onderhoud van Rapture, met zijn spijkerpistool voor leidingen, maar werd uiteindelijk gebruikt om Splicers af te weren. De Rumbler is uitgerust met raketwerpers om grotere bedreigingen op afstand te houden
+		</p>
+		<img src="./images/Bioshock downfall.png">
+	</article>
+</section>
+	<script src="scripts/script.js"></script>
+</body>
+	
+
+
+<!--****************-->
+<!--*****Bubbels****-->
+<!--****************-->
+
+<div class="bubble"></div>
+    <!-- Voeg meer bellen toe zoals dat nodig is -->
+    <script src="script.js"></script>
+
+</html>
